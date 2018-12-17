@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark justify-content-between">
+  <div class="d-flex align-items-center">
+      <a class="navbar-brand" [routerLink]="['/']">Sample KBXL Application</a>
+  </div>
+</nav>
+<p-tabMenu [model]="menu$ | async" [activeItem]="activeRoute$ | async"></p-tabMenu>
+
+<main role="main" class="container-fluid background p-4">
+  <router-outlet></router-outlet>
+</main>
+<kbxl-lib-autologin></kbxl-lib-autologin>
+<p-growl [baseZIndex]="1000"></p-growl>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle" width="425"></p-confirmDialog>

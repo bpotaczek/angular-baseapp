@@ -1,0 +1,8 @@
+<div class="ui-g">
+  <div class="ui-g-6">
+    <p-listbox [options]="users$ | async" (onChange)="userSelected($event)" optionLabel="name"></p-listbox>
+  </div>
+  <div class="ui-g-6">
+    <kbxl-user-list-item [user]="selectedUser" (updated)="update($event)"></kbxl-user-list-item>
+  </div>
+</div>
